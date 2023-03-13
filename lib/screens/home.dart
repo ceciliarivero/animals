@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/menu.dart';
+
 class Home extends StatelessWidget {
   const Home({super.key});
 
@@ -39,7 +41,7 @@ class Home extends StatelessWidget {
               ),
               child: Column(
                 children: const [
-                  Placeholder(),
+                  Menu(),
                   Placeholder(),
                   Placeholder(),
                 ],
