@@ -8,7 +8,7 @@ class OptionButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final sizedBoxWidth = isLast == true ? 0.0 : 30.0;
+    final sizedBoxWidth = isLast == true ? 0.0 : 25.0;
 
     return Container(
       margin: EdgeInsets.only(right: sizedBoxWidth),
@@ -22,7 +22,8 @@ class OptionButton extends StatelessWidget {
         child: Text(
           label,
           style: const TextStyle(
-            fontSize: 20,
+            fontSize: 18,
+            color: Colors.white,
           ),
         ),
       ),

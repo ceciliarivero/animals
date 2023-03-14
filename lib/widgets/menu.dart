@@ -8,7 +8,7 @@ class Menu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 50,
+      height: 40,
       margin: const EdgeInsets.only(top: 30.0),
       child: ListView(
         scrollDirection: Axis.horizontal,
