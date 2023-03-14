@@ -27,6 +27,7 @@ class Home extends StatelessWidget {
                         colors: [
                           Color.fromRGBO(96, 125, 139, 0),
                           Color.fromRGBO(96, 125, 139, 0.1),
+                          Color.fromRGBO(96, 125, 139, 0.2),
                           Color.fromRGBO(96, 125, 139, 0.5),
                         ],
                       ),
