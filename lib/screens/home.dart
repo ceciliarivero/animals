@@ -41,10 +41,20 @@ class Home extends StatelessWidget {
                 horizontal: 15,
               ),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: const [
                   Menu(),
                   Placeholder(),
-                  Placeholder(),
+                  Padding(
+                    padding: EdgeInsets.only(top: 20),
+                    child: Text(
+                      'Popular Mammals',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
