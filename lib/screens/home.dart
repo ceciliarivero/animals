@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../widgets/menu.dart';
+import '../widgets/animals.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -44,7 +45,6 @@ class Home extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: const [
                   Menu(),
-                  Placeholder(),
                   Padding(
                     padding: EdgeInsets.only(top: 20),
                     child: Text(
@@ -55,6 +55,7 @@ class Home extends StatelessWidget {
                       ),
                     ),
                   ),
+                  Animals(),
                 ],
               ),
             ),
