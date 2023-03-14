@@ -18,7 +18,10 @@ class Menu extends StatelessWidget {
           OptionButton(label: 'Fish'),
           OptionButton(label: 'Reptiles'),
           OptionButton(label: 'Amphibians'),
-          OptionButton(label: 'Invertebrates'),
+          OptionButton(
+            label: 'Invertebrates',
+            isLast: true,
+          ),
         ],
       ),
     );
