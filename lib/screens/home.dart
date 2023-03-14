@@ -45,14 +45,11 @@ class Home extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: const [
                   Menu(),
-                  Padding(
-                    padding: EdgeInsets.only(top: 20),
-                    child: Text(
-                      'Popular Mammals',
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w600,
-                      ),
+                  Text(
+                    'Popular Mammals',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
                     ),
                   ),
                   Animals(),

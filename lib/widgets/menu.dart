@@ -7,10 +7,10 @@ class Menu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 40,
-      margin: const EdgeInsets.only(top: 30.0),
+    return SizedBox(
+      height: 90,
       child: ListView(
+        padding: const EdgeInsets.symmetric(vertical: 20.0),
         scrollDirection: Axis.horizontal,
         children: const [
           OptionButton(label: 'Mammals'),
