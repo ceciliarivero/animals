@@ -14,7 +14,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: 'Animals',
       theme: ThemeData(
-        primarySwatch: Colors.blueGrey,
+        primarySwatch: Colors.teal,
       ),
       home: Scaffold(
         appBar: AppBar(
