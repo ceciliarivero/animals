@@ -1,16 +1,14 @@
-# animals
+# Animals
 
-A new Flutter project.
+This project is an app built using Flutter.
+It was built as an assignment of the "Flutter Devcamp Womens Special 2023".
+The purpose of it is to display popular animals of 6 different species while using the most fundamental widgets that Flutter offers.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+To start the app run:
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+flutter pub get
+flutter run
+```
