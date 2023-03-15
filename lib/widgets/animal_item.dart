@@ -24,6 +24,17 @@ class AnimalItem extends StatelessWidget {
               alignment: Alignment.center,
               width: double.infinity,
               semanticLabel: 'Photo of a $name',
+              frameBuilder: (context, child, frame, wasSynchronouslyLoaded) =>
+                  child,
+              loadingBuilder: (context, child, loadingProgress) {
+                if (loadingProgress == null) {
+                  return child;
+                }
+
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              },
             ),
           ),
         ),
