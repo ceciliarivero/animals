@@ -22,7 +22,10 @@ class AnimalDetails extends StatelessWidget {
                 tag: animal.id,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(20),
-                  child: Image.network(animal.imagePath),
+                  child: Image.network(
+                    animal.imagePath,
+                    semanticLabel: 'Photo of a ${animal.name}',
+                  ),
                 ),
               ),
               Container(
