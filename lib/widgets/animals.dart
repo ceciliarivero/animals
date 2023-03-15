@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
-import '../data/data.dart';
+import '../models/specie.dart';
 import '../screens/animal_details.dart';
 import './animal_item.dart';
 
 class Animals extends StatelessWidget {
-  const Animals({super.key});
+  final Specie specie;
+
+  const Animals({super.key, required this.specie});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +15,7 @@ class Animals extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 20),
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
-      itemCount: animalList.length,
+      itemCount: specie.animals.length,
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         mainAxisSpacing: 25,
@@ -26,15 +28,15 @@ class Animals extends StatelessWidget {
               context,
               MaterialPageRoute(
                 builder: (context) => AnimalDetails(
-                  animal: animalList[index],
+                  animal: specie.animals[index],
                 ),
               ),
             );
           },
           child: AnimalItem(
-            id: animalList[index].id,
-            name: animalList[index].name,
-            imagePath: animalList[index].imagePath,
+            id: specie.animals[index].id,
+            name: specie.animals[index].name,
+            imagePath: specie.animals[index].imagePath,
           ),
         );
       },

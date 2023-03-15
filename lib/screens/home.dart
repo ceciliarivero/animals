@@ -1,13 +1,31 @@
 import 'package:flutter/material.dart';
 
+import '../data/data.dart';
+import '../models/specie.dart';
 import '../widgets/menu.dart';
 import '../widgets/animals.dart';
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   const Home({super.key});
 
   @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  String _speciesId = 'mammals';
+
+  void _onPressed(id) {
+    setState(() {
+      _speciesId = id;
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
+    final Specie specie =
+        specieList.where((element) => element.id == _speciesId).first;
+
     return SafeArea(
       child: SingleChildScrollView(
         child: Column(
@@ -43,16 +61,16 @@ class Home extends StatelessWidget {
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
-                  Menu(),
+                children: [
+                  Menu(onPressed: _onPressed),
                   Text(
-                    'Popular Mammals',
-                    style: TextStyle(
+                    'Popular ${specie.name}',
+                    style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
-                  Animals(),
+                  Animals(specie: specie),
                 ],
               ),
             ),

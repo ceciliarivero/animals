@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
 
 class OptionButton extends StatelessWidget {
+  final String id;
   final String label;
   final bool? isLast;
+  final Function onPressed;
 
-  const OptionButton({super.key, required this.label, this.isLast = false});
+  const OptionButton({
+    super.key,
+    required this.id,
+    required this.label,
+    this.isLast = false,
+    required this.onPressed,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +21,7 @@ class OptionButton extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(right: sizedBoxWidth),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () => onPressed(id),
         style: ElevatedButton.styleFrom(
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10.0),

@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import './option_button.dart';
 
 class Menu extends StatelessWidget {
-  const Menu({super.key});
+  final Function onPressed;
+
+  const Menu({super.key, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -12,14 +14,17 @@ class Menu extends StatelessWidget {
       child: ListView(
         padding: const EdgeInsets.symmetric(vertical: 20.0),
         scrollDirection: Axis.horizontal,
-        children: const [
-          OptionButton(label: 'Mammals'),
-          OptionButton(label: 'Birds'),
-          OptionButton(label: 'Fish'),
-          OptionButton(label: 'Reptiles'),
-          OptionButton(label: 'Amphibians'),
+        children: [
+          OptionButton(id: 'mammals', label: 'Mammals', onPressed: onPressed),
+          OptionButton(id: 'birds', label: 'Birds', onPressed: onPressed),
+          OptionButton(id: 'fish', label: 'Fish', onPressed: onPressed),
+          OptionButton(id: 'reptiles', label: 'Reptiles', onPressed: onPressed),
           OptionButton(
+              id: 'amphibians', label: 'Amphibians', onPressed: onPressed),
+          OptionButton(
+            id: 'invertebrates',
             label: 'Invertebrates',
+            onPressed: onPressed,
             isLast: true,
           ),
         ],
