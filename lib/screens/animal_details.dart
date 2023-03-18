@@ -24,7 +24,7 @@ class AnimalDetails extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                   child: Image.network(
                     animal.imagePath,
-                    semanticLabel: 'Photo of a ${animal.name}',
+                    semanticLabel: '${animal.name} image',
                   ),
                 ),
               ),

@@ -23,7 +23,7 @@ class AnimalItem extends StatelessWidget {
               fit: BoxFit.cover,
               alignment: Alignment.center,
               width: double.infinity,
-              semanticLabel: 'Photo of a $name',
+              semanticLabel: '$name image',
               frameBuilder: (context, child, frame, wasSynchronouslyLoaded) =>
                   child,
               loadingBuilder: (context, child, loadingProgress) {
