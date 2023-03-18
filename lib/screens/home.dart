@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../data/data.dart';
 import '../models/specie.dart';
-import '../widgets/home_hero.dart';
+import '../widgets/header.dart';
 import '../widgets/menu.dart';
 import '../widgets/animals.dart';
 
@@ -31,7 +31,7 @@ class _HomeState extends State<Home> {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            const HomeHero(),
+            const Header(),
             Container(
               padding: const EdgeInsets.symmetric(
                 horizontal: 15,
