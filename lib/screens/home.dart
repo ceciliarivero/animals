@@ -13,18 +13,18 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  String _speciesId = 'mammals';
+  String _specieId = 'mammals';
 
   void _onPressed(id) {
     setState(() {
-      _speciesId = id;
+      _specieId = id;
     });
   }
 
   @override
   Widget build(BuildContext context) {
     final Specie specie =
-        specieList.where((element) => element.id == _speciesId).first;
+        specieList.where((element) => element.id == _specieId).first;
 
     return SafeArea(
       child: SingleChildScrollView(
