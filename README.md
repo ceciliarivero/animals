@@ -12,3 +12,17 @@ To start the app run:
 flutter pub get
 flutter run
 ```
+
+## Some screenshots
+
+### iOS
+
+| Home screen                                                      | Details screen                                                      |
+| ---------------------------------------------------------------- | ------------------------------------------------------------------- |
+| [![Home screen](/screenshots/ios-1.png)](/screenshots/ios-1.png) | [![Details screen](/screenshots/ios-2.png)](/screenshots/ios-2.png) |
+
+### Android
+
+| Home screen                                                              | Details screen                                                              |
+| ------------------------------------------------------------------------ | --------------------------------------------------------------------------- |
+| [![Home screen](/screenshots/android-1.png)](/screenshots/android-1.png) | [![Details screen](/screenshots/android-2.png)](/screenshots/android-2.png) |
